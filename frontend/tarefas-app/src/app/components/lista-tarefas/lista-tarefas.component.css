@@ -1,0 +1,93 @@
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filtros button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.filtros button.ativo {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.lista-tarefas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tarefa-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f9f9f9;
+  gap: 15px;
+}
+
+.tarefa-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.tarefa-conteudo {
+  flex: 1;
+}
+
+.tarefa-conteudo h3 {
+  margin: 0;
+  color: #333;
+}
+
+.tarefa-conteudo h3.concluida {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.tarefa-conteudo p {
+  margin: 5px 0 0 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.btn-deletar {
+  padding: 6px 12px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-deletar:hover {
+  background: #c82333;
+}
+
+.vazio {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}

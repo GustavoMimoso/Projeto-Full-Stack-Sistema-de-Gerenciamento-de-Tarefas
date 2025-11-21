@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>Minhas Tarefas</h1>
+
+  <div class="filtros">
+    <button (click)="aplicarFiltro('todas')" [class.ativo]="filtro === 'todas'">
+      Todas
+    </button>
+    <button (click)="aplicarFiltro('pendente')" [class.ativo]="filtro === 'pendente'">
+      Pendentes
+    </button>
+    <button (click)="aplicarFiltro('concluida')" [class.ativo]="filtro === 'concluida'">
+      Concluídas
+    </button>
+  </div>
+
+  <div class="lista-tarefas">
+    <div *ngIf="tarefas.length === 0" class="vazio">
+      <p>Nenhuma tarefa encontrada</p>
+    </div>
+
+    <div *ngFor="let tarefa of tarefas" class="tarefa-item">
+      <input 
+        type="checkbox" 
+        [checked]="tarefa.status === 'concluida'"
+        (change)="marcarConcluida(tarefa)"
+      />
+      <div class="tarefa-conteudo">
+        <h3 [class.concluida]="tarefa.status === 'concluida'">{{ tarefa.titulo }}</h3>
+        <p>{{ tarefa.descricao }}</p>
+      </div>
+      <button class="btn-deletar" (click)="deletarTarefa(tarefa.id)">
+        Deletar
+      </button>
+    </div>
+  </div>
+</div>
